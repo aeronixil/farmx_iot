@@ -21,8 +21,7 @@ class DevicesPage extends StatelessWidget {
       appBar: AppBar(title: const Text("FarmX Smart")),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
-          BottomNavigationBarItem(
-              icon: Icon(Icons.wb_twilight), label: "devices"),
+          BottomNavigationBarItem(icon: Icon(Icons.wb_twilight), label: "devices"),
           BottomNavigationBarItem(icon: Icon(Icons.add), label: "add device"),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
@@ -46,7 +45,7 @@ class DevicesPage extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Text("loading ");
           } else if (snapshot.hasData) {
-            var Device1s = snapshot.data!;
+            var devices = snapshot.data!;
           } else if (snapshot.hasError) {
             return const Text("errorinator ");
           }
@@ -55,10 +54,12 @@ class DevicesPage extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             crossAxisSpacing: 10.0,
             crossAxisCount: 2,
-            children: Device1.map((Device1) => ListTile(
-                  deviceId: Device1.deviceID,
-                  userId: Device1.registeredUserID,
-                )).toList(),
+            children: devices
+                .map((Devices) => deviceTile(
+                      deviceId: Devices.deviceID,
+                      userId: Devices.registeredUserID,
+                    ))
+                .toList(),
           );
         },
       ),
