@@ -45,7 +45,7 @@ class DevicesPage extends StatelessWidget {
           if (snapshot.connectionState == ConnectionState.waiting) {
             return const Text("loading ");
           } else if (snapshot.hasData) {
-            var devices = snapshot.data!;
+            var Device1 = snapshot.data!;
           } else if (snapshot.hasError) {
             return const Text("errorinator ");
           }
@@ -54,12 +54,10 @@ class DevicesPage extends StatelessWidget {
             padding: const EdgeInsets.all(20.0),
             crossAxisSpacing: 10.0,
             crossAxisCount: 2,
-            children: devices
-                .map((Devices) => deviceTile(
-                      deviceId: Devices.deviceID,
-                      userId: Devices.registeredUserID,
-                    ))
-                .toList(),
+            children: Device1.map((Devices) => deviceTile(
+                  deviceId: Devices.deviceID,
+                  userId: Devices.registeredUserID,
+                )).toList(),
           );
         },
       ),
