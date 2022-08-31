@@ -38,9 +38,9 @@ dependencies:
   firebase_auth: ^3.6.4
   google_sign_in: ^5.4.1
   cloud_firestore: ^3.4.5
-  json_annotation: ^4.6.0
-  build_runner: ^2.2.0
-  json_serializable: ^6.3.1
+  json_annotation: ^4.3.0
+  build_runner: ^2.1.4
+  json_serializable: ^6.0.0
   rxdart: ^0.27.5
 
 dev_dependencies:

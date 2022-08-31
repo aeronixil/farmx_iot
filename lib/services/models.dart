@@ -18,7 +18,7 @@ class Device1 {
     this.switch4 = false,
   });
 
-  factory Device1.fromJson(Map<String, dynamic> json) =>
-      _$Device1FromJson(json);
+  factory Device1.fromJson(Map<String, dynamic> json) => _$Device1FromJson(json);
+
   Map<String, dynamic> toJson() => _$Device1ToJson(this);
 }
