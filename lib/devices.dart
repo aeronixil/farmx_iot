@@ -49,16 +49,7 @@ class DevicesPage extends StatelessWidget {
           } else if (snapshot.hasError) {
             return const Text("errorinator ");
           }
-          return GridView.count(
-            primary: false,
-            padding: const EdgeInsets.all(20.0),
-            crossAxisSpacing: 10.0,
-            crossAxisCount: 2,
-            children: Device1.map((Devices) => deviceTile(
-                  deviceId: Devices.deviceID,
-                  userId: Devices.registeredUserID,
-                )).toList(),
-          );
+          return Container();
         },
       ),
     );
