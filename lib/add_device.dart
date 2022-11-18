@@ -12,15 +12,60 @@ class AddDevicePage extends StatelessWidget {
         children: [
           Container(
             color: Colors.yellow,
-            child: const Image(image: AssetImage('assets/step1.png')),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Image(image: AssetImage('assets/step1.png')),
+                SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Text(
+                    "Click the reset button using a pin for 5 sec",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
+              ],
+            ),
           ),
           Container(
             color: Colors.green,
-            child: const Image(image: AssetImage('assets/step2.png')),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Image(image: AssetImage('assets/step2.png')),
+                SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Text(
+                    "Turn on bluetooth and connect to wifi",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
+              ],
+            ),
           ),
           Container(
             color: const Color.fromARGB(255, 38, 237, 214),
-            child: const Image(image: AssetImage('assets/step3.png')),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Image(image: AssetImage('assets/step3.png')),
+                SizedBox(
+                  height: 50,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(20.0),
+                  child: Text(
+                    "Enter the credentials to broadcast in next page",
+                    style: TextStyle(fontSize: 25),
+                  ),
+                ),
+              ],
+            ),
           ),
           Container(
             color: const Color.fromARGB(255, 255, 255, 255),
